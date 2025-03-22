@@ -1,4 +1,4 @@
-# ProMessage
+# ProText-AI
 Transform your casual gibberish into workplace poetry without paying Chrome's "developer tax"  
 
 ![GitHub stars](https://img.shields.io/github/stars/thenitinsharma/ProText-AI?style=social)  
