@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProMessage Settings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
+            color: #282828;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #282828;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .logo svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #282828;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #000;
+        }
+        
+        .status {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .status.saved {
+            color: #2e7d32;
+        }
+        
+        .status.error {
+            color: #d32f2f;
+        }
+        
+        .help {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        a {
+            color: #282828;
+            text-decoration: none;
+            border-bottom: 1px dotted #282828;
+        }
+        
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            <h1>ProMessage Settings</h1>
+        </div>
+        
+        <p>Configure your Gemini API key to convert casual text into professional messages.</p>
+        
+        <div class="form-group">
+            <label for="api-key">Gemini API Key</label>
+            <input type="password" id="api-key" placeholder="Enter your Gemini API key">
+            <button id="save-key" style="margin-top: 10px;">Save</button>
+            <div id="status" class="status"></div>
+        </div>
+        
+        <div class="help">
+            <h2>How to get a Gemini API Key</h2>
+            <p>
+                1. Go to the <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a><br>
+                2. Sign in with your Google account<br>
+                3. Create a new API key<br>
+                4. Copy and paste it here
+            </p>
+            <p>Your API key is stored locally on your device and is only used to make requests to the Gemini API.</p>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

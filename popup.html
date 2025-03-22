@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProMessage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 240px;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #282828;
+        }
+        
+        .container {
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 12px;
+            background-color: #282828;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+        
+        p {
+            font-size: 13px;
+            color: #666;
+            margin: 8px 0 16px;
+            line-height: 1.4;
+        }
+        
+        .api-key {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #282828;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #000;
+        }
+        
+        .status {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+        
+        .status.saved {
+            color: #2e7d32;
+        }
+        
+        .status.error {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+            </svg>
+        </div>
+        <h2>ProMessage</h2>
+        <p>Click on any text field and use the floating button to convert casual text into professional messages.</p>
+        
+        <div class="api-key">
+            <label for="api-key">Your Gemini API Key</label>
+            <input type="password" id="api-key" placeholder="Enter your Gemini API key">
+            <button id="save-key">Save</button>
+            <div id="status" class="status"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
