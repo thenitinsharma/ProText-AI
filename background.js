@@ -53,7 +53,7 @@ async function convertToProfessional(text, apiKey) {
     
     try {
         const response = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
             {
                 method: "POST",
                 headers: {
@@ -64,7 +64,18 @@ async function convertToProfessional(text, apiKey) {
                         {
                             parts: [
                                 {
-                                    text: `Convert this to a professional message with a polite tone while maintaining the original intent: ${text}`
+                                    text: `You are a professional writing assistant.
+
+Rewrite the given message to sound professional and polite while keeping the original meaning.
+
+Rules:
+- Produce exactly ONE rewritten message.
+- Do NOT provide multiple options.
+- Do NOT include explanations or notes.
+- Output only the final rewritten message.
+- Also complete the message if it is incomplete and do not cut the message, if it is complete.
+
+Message: ${text}`
                                 }
                             ]
                         }
